@@ -1,0 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+
+#thanks {
+
+    -ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(-2deg); /* Chrome, Safari, Opera */
+    transform: rotate(-2deg);
+
+    font-family: 'Permanent Marker', cursive;
+	font-size: 48px;
+	color: #ff0000 !important;
+
+	line-height: .8em;
+
+}
+
+	.photobanner {
+	    padding: 8em 0 2em 0 !important;
+	}

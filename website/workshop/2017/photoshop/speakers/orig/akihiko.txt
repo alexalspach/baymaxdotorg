@@ -1,0 +1,15 @@
+Bio:
+Akihiko Yamaguchi received the BE degree from the Kyoto University,
+Kyoto, Japan, in 2006, and the ME and the PhD degrees from Nara
+Institute of Science and Technology (NAIST), Nara, Japan, in 2008 and
+2011, respectively. From April 2010 to July in 2011, he was with NAIST
+as a JSPS, Japan Society for the Promotion of Science, Research
+Fellow. From August 2011 to March 2015, he was with NAIST as an
+Assistant Professor of the Robotics Laboratory in the Graduate School
+of Information Science. From April 2014 to March 2015, he was a
+visiting scholar of Robotics Institute in Carnegie Mellon University,
+and from April 2015 to present, he is a postdoctoral fellow of the
+same institute. His research interests include robot learning,
+reinforcement learning, artificial intelligence, and manipulation of
+deformable objects especially pouring.
+http://akihikoy.net/
