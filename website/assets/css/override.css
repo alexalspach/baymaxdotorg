@@ -169,15 +169,17 @@
 	ol {
 	    counter-reset: foo;
 	    display: table;
+
 	}
 
 	ol > li {
 	    counter-increment: foo;
 	    display: table-row;
+	    padding-left: 3em;
 	}
 
 	ol > li::before {
-	    content: counter(foo) ".";
+	    content: counter(foo) ".\00a0\00a0";
 	    display: table-cell; /* aha! */
 	    text-align: right;
 	}
@@ -665,6 +667,10 @@
 		/*width: 60%;*/
 		width: 80%;
 		
+	}
+
+	.youtube-recording-thumbs {
+		width: 30%;
 	}
 
 
