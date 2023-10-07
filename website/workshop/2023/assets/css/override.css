@@ -668,11 +668,7 @@
 		width: 80%;
 	}
 
-	.speaker_logo {
-		height: 10em;
-		max-width: 30em;
-		margin:2em;
-	}
+
 
 	.org_logos2_graybg {
 		width: 100%;
@@ -702,8 +698,15 @@
 		
 	}
 
+	.speaker_logo {
+		max-height: 10em;
+		max-width: 30em;
+		margin:2em;
+	}
+
 
 	@media screen and (max-width: 1280px) {
+
 		.logo_container2 {
 	  		margin-top: 70px;
 		}	
@@ -713,6 +716,7 @@
 			width: 90%;
 			
 		}
+
 	}
 
 
@@ -752,8 +756,12 @@
 		}
 		.org_logos {
 			/*width: 20%;*/
-			
 		}
+
+		.speaker_logo {
+			width: 80%;
+		}
+
 	}	
 
 
@@ -785,6 +793,14 @@
 
 	@media screen and (max-width: 480px) {	
 
+		#baymax {
+
+			/*background-image: url("../../images/baymax.png");*/
+			top: 300px;
+			margin: 0px 0px 0px -35px;
+			height: 300px;
+
+		}
 
 		.logo_container {
 	  		margin-top: 0px;
@@ -823,9 +839,9 @@
 		#baymax {
 
 			/*background-image: url("../../images/baymax.png");*/
-			top: 380px;
+			top: 300px;
 			margin: 0px 0px 0px -35px;
-			height: 250px;
+			height: 230px;
 
 		}
 
@@ -837,7 +853,7 @@
 		#baymax {
 
 			/*background-image: url("../../images/baymax.png");*/
-			top: 400px;
+			top: 330px;
 			margin: 0px 0px 0px -35px;
 			height: 250px;
 
