@@ -558,8 +558,6 @@
 
 	}
 
-	#fun-title {
-	}
 
 	#fun-title .bighero-font
 	{
@@ -568,7 +566,7 @@
 		font-size: 3em;
 		padding: .2em;
 		margin-top: 0em;
-		margin-bottom: .5em;
+		margin-bottom: 1em;
 		line-height: .9em;
 	}
 
@@ -711,7 +709,13 @@
 	.speaker_logo {
 		max-height: 10em;
 		max-width: 30em;
-		margin:2em;
+		margin:1em;
+		background-color: ghostwhite;
+		padding: 15px;
+		border: .3rem solid #E3E653;
+		border-radius: 10px;
+		border-color: #E3E653;
+
 	}
 
 
@@ -798,6 +802,15 @@
 			
 		}
 
+		#fun-title .bighero-font
+		{
+			font-size: 2em;
+			padding: .2em;
+			margin-top: 0em;
+			margin-bottom: 1em;
+			line-height: .9em;
+		}
+
 
 	}
 
@@ -853,6 +866,15 @@
 			margin: 0px 0px 0px -35px;
 			height: 230px;
 
+		}
+
+		#fun-title .bighero-font
+		{
+			font-size: 1.5em;
+			padding: .2em;
+			margin-top: 0em;
+			margin-bottom: 1em;
+			line-height: .9em;
 		}
 
 	}	
