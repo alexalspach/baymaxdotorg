@@ -668,6 +668,12 @@
 		width: 80%;
 	}
 
+	.speaker_logo {
+		height: 10em;
+		max-width: 30em;
+		margin:2em;
+	}
+
 	.org_logos2_graybg {
 		width: 100%;
 		background: #EEE;
