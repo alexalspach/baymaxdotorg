@@ -14,9 +14,7 @@
 	}
 
 	.bighero-font {
-
 		font-family: 'BigHero'; /*a name to be used later*/
-
 	}
 
 
@@ -565,14 +563,26 @@
 
 	#fun-title .bighero-font
 	{
+		color: whitesmoke;
 		color: #E3E653;
 		font-size: 3em;
-		margin: 0 0 0.2em 0;
-		padding: 0;
-		margin-top: 2em;
-		margin-bottom: -1.0em;
+		padding: .2em;
+		margin-top: 0em;
+		margin-bottom: .5em;
+		line-height: .9em;
 	}
 
+	.stamp {
+	  transform: rotate(-3deg);
+		font-weight: 700;
+		border: 0.25rem solid #E3E653;
+		display: inline-block;
+		text-transform: uppercase;
+		border-radius: 1rem;
+		-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+	  -webkit-mask-size: 944px 604px;
+	  /*mix-blend-mode: multiply;*/
+	}
 
 	#banner {
 
