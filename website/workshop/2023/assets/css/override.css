@@ -707,11 +707,14 @@
 	}
 
 	.speaker_logo {
-		max-height: 10em;
+		height: 10em;
 		max-width: 30em;
 		margin:1em;
 		background-color: ghostwhite;
-		padding: 15px;
+		padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;
 		border: .3rem solid #E3E653;
 		border-radius: 10px;
 		border-color: #E3E653;
