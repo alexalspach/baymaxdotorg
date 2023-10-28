@@ -83,6 +83,16 @@
 		border-top: 4px solid #437086;
 	}
 
+	.schedule .sched_time_2019 {
+		min-width: 150px;
+		text-align: center;
+		font-weight: 600;
+	}
+
+	.schedule .sched_speaker_2019 { 
+    	padding-right: 1.5em;
+	}	
+
 	.schedule .local_time {
 		border-color: #E3E653;
 	}
@@ -202,6 +212,11 @@
 
 	h1, h2, h3, h4, h5, h6 {
 		text-transform: none;
+	}
+
+	h1 {
+
+		line-height: 1.4em;
 	}
 
 	h2 {
@@ -718,7 +733,13 @@
 		border: .3rem solid #E3E653;
 		border-radius: 10px;
 		border-color: #E3E653;
+	}
 
+	.speaker_logo:hover {	
+		-webkit-transform: rotate(3deg) scale(1.05);
+		transform: rotate(3deg) scale(1.05);
+		-webkit-transition: .2s ease-in-out;
+		transition: .2s ease-in-out;
 	}
 
 
