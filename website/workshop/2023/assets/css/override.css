@@ -735,12 +735,14 @@
 		border-color: #E3E653;
 	}
 
+	/*
 	.speaker_logo:hover {	
 		-webkit-transform: rotate(3deg) scale(1.05);
 		transform: rotate(3deg) scale(1.05);
 		-webkit-transition: .2s ease-in-out;
 		transition: .2s ease-in-out;
 	}
+	*/
 
 
 	@media screen and (max-width: 1280px) {
