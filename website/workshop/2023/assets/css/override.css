@@ -735,6 +735,20 @@
 		border-color: #E3E653;
 	}
 
+	.speaker_robot {
+		height: 25em;
+		/*max-width: 30em;*/
+		margin:1em;
+		background-color: ghostwhite;
+		padding-left: 0px;
+		padding-right: 0px;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		border: .3rem solid #E3E653;
+		border-radius: 10px;
+		border-color: #E3E653;
+	}
+
 	/*
 	.speaker_logo:hover {	
 		-webkit-transform: rotate(3deg) scale(1.05);
@@ -801,6 +815,10 @@
 		.speaker_logo {
 			width: 80%;
 		}
+
+		.speaker_robot {
+			width: 80%;
+		}		
 
 	}	
 
