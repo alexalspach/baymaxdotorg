@@ -736,8 +736,8 @@
 	}
 
 	.speaker_robot {
-		height: 25em;
-		/*max-width: 30em;*/
+		/*height: 25em;*/
+		width: 30%;
 		margin:1em;
 		background-color: ghostwhite;
 		padding-left: 0px;
@@ -817,7 +817,8 @@
 		}
 
 		.speaker_robot {
-			height: 20em;
+			width: 45%;
+			margin: 2%;
 		}		
 
 	}	
