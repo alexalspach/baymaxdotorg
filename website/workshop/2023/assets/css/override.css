@@ -457,6 +457,8 @@
 	}
 
 
+
+
 	.wrapper.style2 {
 		/*background-color: #12213c;
 		color: rgba(255, 255, 255, 0.75);*/
@@ -737,8 +739,8 @@
 
 	.speaker_robot {
 		/*height: 25em;*/
-		width: 30%;
-		margin:1em;
+		width: 18%;
+		margin:0.5%;
 		background-color: ghostwhite;
 		padding-left: 0px;
 		padding-right: 0px;
@@ -796,6 +798,11 @@
 			
 		}
 
+		.speaker_robot {
+			width: 25%;
+			margin: 1%;
+		}
+
 
 
 	}
@@ -819,7 +826,7 @@
 		.speaker_robot {
 			width: 45%;
 			margin: 2%;
-		}		
+		}
 
 	}	
 
