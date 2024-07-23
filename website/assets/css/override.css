@@ -593,9 +593,10 @@
 		border: 0.25rem solid #E3E653;
 		display: inline-block;
 		text-transform: uppercase;
-		border-radius: 1rem;
-		-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+		border-radius: 1rem; 
+		-webkit-mask-image: url('images/grunge.png');
 	  -webkit-mask-size: 944px 604px;
+	  margin-bottom: 2em;
 	  /*mix-blend-mode: multiply;*/
 	}
 
@@ -605,11 +606,11 @@
 		border: 0.25rem solid #E3E653;
 		display: inline-block;
 		text-transform: uppercase;
-		border-radius: 1rem;
-		-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+		border-radius: 1rem; 
+		-webkit-mask-image: url('images/grunge.png');
 	  -webkit-mask-size: 944px 604px;
 	  /*mix-blend-mode: multiply;*/
-	}	
+	}		
 
 	#banner {
 
@@ -740,6 +741,20 @@
 	.workshop_banner {
 		/*height: 15em;*/
 		max-width: 30em;
+		margin:1em;
+		background-color: ghostwhite;
+		/*padding-left: 30px;
+		padding-right: 30px;
+		padding-top: 15px;
+		padding-bottom: 15px;*/
+		border: .3rem solid #E3E653;
+		border-radius: 10px;
+		border-color: #E3E653;
+	}
+
+	.workshop_banner_large {
+		/*height: 15em;*/
+		max-width: 40em;
 		margin:1em;
 		background-color: ghostwhite;
 		/*padding-left: 30px;
