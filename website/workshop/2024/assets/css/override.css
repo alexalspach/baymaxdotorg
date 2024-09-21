@@ -609,10 +609,12 @@
 
 
 		background-position: -0px 40px;
-		background-image: url("../../images/bg/bg10.jpg");
-	
-
-
+  		
+  		background: radial-gradient(
+  			ellipse, 
+  			rgba(116, 0, 255,0.43),
+  			rgba(0,0,0,0.0)), 
+  		url("../../images/bg/bg10.jpg");
 
 
   		/*background: radial-gradient(
@@ -952,6 +954,7 @@
 			top: 400px;
 			margin: 0px 0px 0px -35px;
 			height: 300px;
+			display: none;
 
 		}
 
@@ -995,6 +998,7 @@
 			top: 400px;
 			margin: 0px 0px 0px -35px;
 			height: 230px;
+			display: none;
 
 		}
 

@@ -625,7 +625,11 @@
 		background-image: url("../../assets/images/bg/bg10.jpg");
 	
 
-
+  		background: radial-gradient(
+  			ellipse, 
+  			rgba(116, 0, 255,0.43),
+  			rgba(0,0,0,0.0)), 
+  		url("../../assets/images/bg/bg10.jpg");
 
 
   		/*background: radial-gradient(
@@ -747,13 +751,13 @@
 		padding-right: 30px;
 		padding-top: 15px;
 		padding-bottom: 15px;*/
-		border: .3rem solid #E3E653;
+		/*border: .3rem solid #E3E653;*/
 		border-radius: 10px;
-		border-color: #E3E653;
 	}
 
 	.workshop_banner_large {
 		/*height: 15em;*/
+		width: 80%;
 		max-width: 40em;
 		margin:1em;
 		background-color: ghostwhite;
@@ -763,7 +767,6 @@
 		padding-bottom: 15px;*/
 		border: .3rem solid #E3E653;
 		border-radius: 10px;
-		border-color: #E3E653;
 	}
 
 	.speaker_logo {
@@ -866,16 +869,34 @@
 
 
 
+	@media screen and (max-width: 1200px) {
+
+		#baymax {
+
+			/*background-image: url("../../assets/images/baymax.png");*/
+			top: 700px;
+			margin: 0px 0px 0px -35px;
+			height: 690px;
+
+
+		}
+
+	}
+
+
 	@media screen and (max-width: 980px) {
 
 		#baymax {
 
 			/*background-image: url("../../assets/images/baymax.png");*/
-			top: 350px;
+			top: 700px;
 			margin: 0px 0px 0px -35px;
-			height: 400px;
+			height: 690px;
+			display: none;
+
 
 		}
+
 
 		.logo_container2 {
 	  		margin-top: 60px;
@@ -955,6 +976,7 @@
 			top: 360px;
 			margin: 0px 0px 0px -35px;
 			height: 300px;
+			display: none;
 
 		}
 
@@ -989,6 +1011,7 @@
 			top: 400px;
 			margin: 0px 0px 0px -35px;
 			height: 300px;
+			display: none;
 
 		}
 
@@ -1032,8 +1055,16 @@
 			top: 400px;
 			margin: 0px 0px 0px -35px;
 			height: 230px;
+			display: none;
 
 		}
+
+
+		.workshop_banner_large {
+			/*height: 15em;*/
+			width: 90%;
+		}
+
 
 		#fun-title .bighero-font
 		{
