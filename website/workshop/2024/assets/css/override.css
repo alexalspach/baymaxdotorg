@@ -647,14 +647,17 @@
 		
 		min-width: 8em;
 
-		font-size: 2em;
-		line-height: 3.2em;
+		font-size: 1.6em;
+		line-height: 3.0em;
 		font-weight: 500;
 
 		border-style: solid;
 		border-radius: 0.5em;
 		border-color: #ef9825;
 		border-width: 3px;
+
+		position: relative;
+		z-index: 99;
 	}	
 
 	#banner p {
