@@ -165,6 +165,8 @@
 	.short-text {
 	    overflow: hidden;
 	    height: 0em;
+	    text-align: left;
+	    font-weight: normal;
 	}
 
 	.full-text{
@@ -175,6 +177,11 @@
 	.show-more {
 	    padding-top: 0.1em;
 	    text-align: left;
+	}
+
+	.show-more-speaker-section {
+	    padding-top: 0.1em;
+	    text-align: center;
 	}
 
 
