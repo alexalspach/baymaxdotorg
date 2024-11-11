@@ -38,5 +38,24 @@ function getShowLinkText(currentText) {
         newText = "More Info";
     }
 
+
+    if (currentText.toUpperCase() === "BIO AND ABSTRACT") {
+        newText = "Close Bio and Abstract";
+    } else {
+        newText = "Bio and Abstract";
+    }
+
+    if (currentText.toUpperCase() === "BIO") {
+        newText = "Close Bio";
+    } else {
+        newText = "Bio";
+    }
+
+    if (currentText.toUpperCase() === "ABSTRACT") {
+        newText = "Close Abstract";
+    } else {
+        newText = "Abstract";
+    }
+
     return newText;
 }
