@@ -38,12 +38,5 @@ function getShowLinkText(currentText) {
         newText = "More Info";
     }
 
-
-    if (currentText.toUpperCase() === "BIO AND ABSTRACT") {
-        newText = "Close Bio and Abstract";
-    } else {
-        newText = "Bio and Abstract";
-    }
-
     return newText;
 }
