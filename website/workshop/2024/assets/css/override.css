@@ -84,18 +84,18 @@
 	}
 
 	.schedule .sched_time_2019 {
-		min-width: 150px;
+		min-width: 185px;
 		/* text-align: center; */
 		font-weight: 600;
 
 		text-align: left;
 		padding-left: 60px;
 
-
 	}
 
 	.schedule .sched_speaker_2019 { 
     	padding-right: 1.5em;
+    	line-height: 1.4em;
 	}	
 
 	.schedule .local_time {
