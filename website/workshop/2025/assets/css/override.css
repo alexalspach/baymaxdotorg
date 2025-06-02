@@ -1,8 +1,5 @@
 	.object-fit_contain { object-fit: contain }
 
-	@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
-
 	@font-face {
 	    font-family: "BigHero";
 	    src: url("../fonts/bighero.ttf");
@@ -56,7 +53,18 @@
 	  font-family: "Permanent Marker", cursive;
 	  font-weight: 400;
 	  font-style: normal;
-}
+	}
+
+
+
+	#WSTitle {
+
+		margin-top: 2em;
+		margin-bottom: 1em;
+
+		text-shadow: 0px 2px 8px #222;
+
+	}	
 
 	.number-10 {
 		font-family: "BigHeroNumbers", system-ui;
@@ -65,9 +73,23 @@
 		margin-bottom: .4em;
 		/*color: #E3E653;*/
 
-	      -webkit-text-fill-color: #E3E653; 
-	      -webkit-text-stroke-width: 5px;
-	      -webkit-text-stroke-color: whitesmoke;
+	    -webkit-text-fill-color: #E3E653; 
+	    -webkit-text-stroke-width: 5px;
+	    -webkit-text-stroke-color: whitesmoke;
+
+		text-shadow: 0px 10px 8px #222;
+	}
+
+
+
+
+	.question_mark {
+		display: inline-block;
+		font-size: 120%;
+		
+  		transform: rotate(10deg) translateX(-.05em) translateY(.05em);;
+
+
 	}
 
 
@@ -81,26 +103,54 @@
 		color: whitesmoke;
 
 	    /* -webkit-text-fill-color: whitesmoke; */
+
 	}	
 
 	.workshop_theme {
 		font-size: 2.5em;
 		margin-top: .1em;
-		margin-bottom: .4em;
+		margin-bottom: .2em;
 		/*color: #E3E653;*/
 		line-height: 1.1em;
 
-	      -webkit-text-fill-color: whitesmoke; 
-	      font-family: "Permanent Marker", cursive;
-	      line-height: ;
+	    -webkit-text-fill-color: whitesmoke; 
+	    font-family: "Permanent Marker", cursive;
+
 	}	
+
+	
+
+	.workshop_theme_byob1 {
+		font-size: 2em;
+		margin-bottom: .0em;
+		/*color: #E3E653;*/
+		font-weight: 600;
+
+		color: whitesmoke;
+
+	    -webkit-text-fill-color: whitesmoke; 
+
+	}	
+
+	.workshop_theme_byob2 {
+		font-size: 1.5em;
+		margin-bottom: .1em;
+		/*color: #E3E653;*/
+		font-weight: 600;
+
+		color: whitesmoke;
+
+	    -webkit-text-fill-color: whitesmoke; 
+
+	}		
+
 
 	.workshop_year {
 		font-size: 2em;
 		margin-top: .4em;
 		margin-bottom: .1em;
 		/*color: #E3E653;*/
-		font-weight: 500;
+		font-weight: 600;
 
 		color: whitesmoke;
 
@@ -557,13 +607,6 @@
 		position: fixed;
 	}	
 
-	#WSTitle {
-
-		margin-top: 2em;
-		margin-bottom: 1em;
-
-	}
-
 
 	#fun-title .bighero-font
 	{
@@ -659,7 +702,7 @@
 		/*color: #ef9825;*/
 		color: whitesmoke;
 		font-size: 4em;
-		line-height: .7em;
+		line-height: .85em;
 
 		margin: 0 0 0.2em 0;
 		padding: 0
@@ -811,6 +854,15 @@
 
 	@media screen and (max-width: 1300px) {
 
+		#baymax {
+
+			/*background-image: url("../../images/baymax.png");*/
+			top: 350px;
+			height: 800px;
+			margin: 0px 0px 0px -45px;
+
+
+		}
 
 
 		.logo_container2 {
@@ -841,16 +893,14 @@
 	@media screen and (max-width: 1280px) {
 
 
+
 		#baymax {
 
 			/*background-image: url("../../images/baymax.png");*/
-			top: 350px;
-			height: 800px;
-			margin: 0px 0px 0px -45px;
-
+			top: 450px;
+			height: 600px;
 
 		}
-
 
 		.feature {
 			margin-bottom: 4em;
@@ -889,13 +939,7 @@
 	@media screen and (max-width: 1090px) {
 
 
-		#baymax {
 
-			/*background-image: url("../../images/baymax.png");*/
-			top: 450px;
-			height: 600px;
-
-		}
 
 	}
 
@@ -907,6 +951,7 @@
 			/*background-image: url("../../images/baymax.png");*/
 			top: 550px;
 			height: 500px;
+
 
 		}
 

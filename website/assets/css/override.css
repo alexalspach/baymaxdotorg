@@ -1,8 +1,5 @@
 	.object-fit_contain { object-fit: contain }
 
-	@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
-
-
 	@font-face {
 	    font-family: "BigHero";
 	    src: url("../fonts/bighero.ttf");
@@ -17,6 +14,19 @@
 		font-family: 'BigHero'; /*a name to be used later*/
 	}
 
+	.question_mark {
+		display: inline-block;
+		font-size: 120%;
+		
+  		transform: rotate(10deg) translateX(-.05em) translateY(.05em);;
+	}	
+
+	.permanent-marker-regular {
+	  font-family: "Permanent Marker", cursive;
+	  font-weight: 400;
+	  font-style: normal;
+	}
+
 	.number-10 {
 		font-family: "BigHeroNumbers", system-ui;
 		font-size: 10em;
@@ -29,6 +39,19 @@
 	      -webkit-text-stroke-color: whitesmoke;
 	}
 
+
+
+	.banner_tagline {
+		font-size: 2em;
+		margin-top: .4em;
+		margin-bottom: .1em;
+		/*color: #E3E653;*/
+		font-weight: 600;
+
+		color: #E3E653;
+
+	    /* -webkit-text-fill-color: whitesmoke; */
+	}
 
 
 	/*Table*/
@@ -693,9 +716,10 @@
 	#banner .bighero-font {
 		/*color: #ef9825;*/
 		color: whitesmoke;
-		font-size: 3em;
+		font-size: 4em;
+		line-height: .85em;
 		margin: 0 0 0.2em 0;
-		padding: 0;
+		padding: 0
 	}
 
 	#baymax {
@@ -996,6 +1020,14 @@
 	
 	}	
 
+	@media screen and (max-width: 600px) {
+		#banner .bighero-font {
+			font-size: 3.5em;
+			margin: 0 0 -.0em 0;
+			line-height: .85em;
+		}	
+	}
+
 
 	@media screen and (max-width: 540px) {
 
@@ -1069,10 +1101,6 @@
 
 		}
 
-		#banner .bighero-font {
-			font-size: 1.8em;
-			margin: 0 0 -.0em 0;
-		}
 
 	}	
 
