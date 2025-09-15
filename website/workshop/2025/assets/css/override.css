@@ -66,6 +66,20 @@
 
 	}	
 
+
+	#Upcoming {
+
+		margin-top: 2em;
+		margin-bottom: 1em;
+
+		text-shadow: 0px 2px 8px #222;
+
+		font-size: 16px;
+   		font-size: 4vw;
+
+	}	
+
+
 	.number-10 {
 		font-family: "BigHeroNumbers", system-ui;
 		font-size: 10em;
@@ -160,6 +174,12 @@
 
 	/*Table*/
 
+	hr {
+	  border: none; /* Remove default border */
+	  height: 2px; /* Set the thickness of the line */
+	  background-color: #f3e860; /* Set the color of the line */
+	  margin: 20px 0; /* Add some spacing above and below */
+	}
 
 
 	table td {
@@ -311,6 +331,7 @@
 	.full-text{
 		padding-top: 0.4em;
 	    height: auto;
+	    justify-content: left;
 	}
 
 	.show-more {
