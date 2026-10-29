@@ -663,9 +663,16 @@
 		display: inline-block;
 		text-transform: uppercase;
 		border-radius: 1rem;
-		-webkit-mask-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/8399/grunge.png');
+		-webkit-mask-image: url('images/grunge.png');
 	  -webkit-mask-size: 944px 604px;
+	  margin-bottom: 2em;
 	  /*mix-blend-mode: multiply;*/
+	}
+
+	/* .bighero-font carries a 1em bottom margin that inflates the stamp's
+	   border box into what looks like an empty second line. */
+	#fun-title .stamp .bighero-font {
+		margin-bottom: 0;
 	}
 
 	#banner {
