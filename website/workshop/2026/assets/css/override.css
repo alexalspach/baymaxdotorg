@@ -1249,3 +1249,82 @@
 
 	}	
 
+
+
+	/* =====================================================================
+	   BAYMAX GUTTER — added 2026-11-06
+	   Applies to this year's workshop page and its mixer page (they share
+	   this file). The 2025 and earlier folders have their own copies and are
+	   untouched.
+
+	   The problem: #baymax is absolutely positioned at the left while the
+	   banner text is centred, and his size was set in steps (900/800/600/500
+	   px at the 1300/1280/980 breakpoints). Between those steps the picture
+	   and the text collided. Measured with a width sweep on 2026-11-06:
+	   text ran as much as 200px into him, continuously from 740px up to
+	   1540px, on BOTH pages.
+
+	   The fix has three parts:
+	     1. left: 0 — he had no `left`, so he was sitting at #banner's
+	        padding edge. Without this, padding the banner would simply push
+	        him along with the text and fix nothing.
+	     2. a continuous height instead of the stepped one, so there is no
+	        width at which a step and the reserved gutter disagree.
+	     3. symmetric padding on #banner equal to his width plus some air.
+	        Symmetric rather than left-only so the text stays centred on the
+	        page as it always has been; on wide screens the lines are
+	        narrower than the content box anyway, so it costs nothing to look
+	        at. Narrower than about 1000px the text simply wraps more.
+
+	   Everything derives from --baymax-h, so the picture and the gutter
+	   cannot drift apart: change the height and the gutter follows.
+	   ===================================================================== */
+
+	:root {
+		--baymax-ratio: 0.5043;                    /* baymax.png is 470 x 932 */
+		--baymax-h: clamp(300px, 47vw, 900px);
+		--baymax-w: calc(var(--baymax-ratio) * var(--baymax-h));
+		--baymax-gap: 1.5rem;                      /* air between him and the text */
+		--baymax-gutter: calc(var(--baymax-w) + var(--baymax-gap));
+
+		/* Usable width of #banner's content box. Type that must not wrap can
+		   size itself off this — see .mixer-word on the mixer page. */
+		--banner-content: calc(100vw - 2 * var(--baymax-gutter));
+	}
+
+	#baymax {
+		left: 0;
+		margin: 0;
+		height: var(--baymax-h);
+		/* He sits lower as the viewport narrows, because the banner grows
+		   taller. Continuous, for the same reason the height is. */
+		top: clamp(200px, calc(950px - 38vw), 560px);
+	}
+
+	@media screen and (min-width: 736px) {
+
+		#banner {
+			padding-left: var(--baymax-gutter);
+			padding-right: var(--baymax-gutter);
+		}
+
+	}
+
+	@media screen and (max-width: 736px) {
+
+		/* #baymax is display:none from here down, so a gutter would only
+		   waste width. #banner's own padding is 3em a side at this range. */
+		:root {
+			--banner-content: calc(100vw - 6em);
+		}
+
+	}
+
+	@media screen and (max-width: 480px) {
+
+		/* ...and 2em a side from here down. */
+		:root {
+			--banner-content: calc(100vw - 4em);
+		}
+
+	}

@@ -1,0 +1,515 @@
+<!DOCTYPE HTML>
+<!--
+	Retrospect by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+
+	2026 MIXER INVITE
+	Lives at /workshop/2026/mixer/ so all shared assets are one level up (../assets, ../images).
+	Not linked from the 2026 workshop page yet (the MIXER button there is still commented out).
+-->
+
+<html>
+	<head>
+
+
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-S6N0C4RQTQ"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'G-S6N0C4RQTQ');
+		</script>
+
+
+		<!-- realfavicongenerator.net -->
+		<link rel="apple-touch-icon" sizes="180x180" href="../images/favicons/green/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="../images/favicons/green/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="../images/favicons/green/favicon-16x16.png">
+		<link rel="manifest" href="../images/favicons/green/site.webmanifest">
+		<link rel="mask-icon" href="../images/favicons/green/safari-pinned-tab.svg" color="#0f1524">
+		<link rel="shortcut icon" href="../images/favicons/green/favicon.ico">
+		<meta name="apple-mobile-web-app-title" content="CWBB?">
+		<meta name="application-name" content="CWBB?">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-config" content="../images/favicons/green/browserconfig.xml">
+		<meta name="theme-color" content="#ffffff">
+
+		<!-- HTML Meta Tags -->
+		<title>Can we build Baymax? MIXER &middot; Humanoids 2026</title>
+		<meta name="description" content="Join us for the 'Can We Build Baymax?' mixer at Humanoids 2026 — Monday, December 7, 7:00–11:00 PM at Clara's Junction in Santa Clara. Drinks and small bites are on the house. First come, first served.">
+
+		<!-- Page scale -->
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="../assets/js/ie/html5shiv.js"></script><![endif]-->
+
+		<!-- CSS -->
+		<link rel="stylesheet" href="../assets/css/main_orig.css" />
+		<link rel="stylesheet" href="../assets/css/override.css" />
+		<link rel="stylesheet" href="../assets/css/photos.css">
+		<link rel="stylesheet" href="../assets/css/hovercss/hover.css">
+		<!--[if lte IE 8]><link rel="stylesheet" href="../assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="../assets/css/ie9.css" /><![endif]-->
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://baymax.org/workshop/2026/mixer">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="Can we build Baymax? MIXER &middot; Humanoids 2026">
+		<meta property="og:description" content="Join us for the 'Can We Build Baymax?' mixer at Humanoids 2026 — Monday, December 7, 7:00–11:00 PM at Clara's Junction in Santa Clara. Drinks and small bites are on the house. First come, first served.">
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image">
+		<meta property="twitter:domain" content="baymax.org">
+		<meta property="twitter:url" content="https://baymax.org/workshop/2026/mixer">
+		<meta name="twitter:title" content="Can we build Baymax? MIXER &middot; Humanoids 2026">
+		<meta name="twitter:description" content="Join us for the 'Can We Build Baymax?' mixer at Humanoids 2026 — Monday, December 7, 7:00–11:00 PM at Clara's Junction in Santa Clara. Drinks and small bites are on the house. First come, first served.">
+
+		<!-- BANNER -->
+		<!-- mixer-banner.jpg is this page's own share image, 1200x630 (the og /
+		     twitter summary_large_image standard). It is a centre crop of the
+		     full-bleed artwork Alex supplied 2026-11-06; the crop was checked
+		     against the artwork's text bounds so nothing is clipped. The workshop
+		     page still uses images/banner/banner.jpg. -->
+		<meta property="og:image" content="https://baymax.org/workshop/2026/images/banner/mixer-banner.jpg">
+		<meta name="twitter:image" content="https://baymax.org/workshop/2026/images/banner/mixer-banner.jpg">
+
+		<!-- Fonts -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Fredericka+the+Great&family=Fredoka:wght@400;500;600;700&family=Permanent+Marker&family=Rubik+Glitch&family=Rubik+Vinyl&family=Spicy+Rice&display=swap" rel="stylesheet">
+
+
+		<!-- RSVP form.
+		     The questions below are the live fields of the "Baymax Mixer RSVP" Google Form
+		     (form id 1FAIpQLSextDHvYHQteZroQgRb2tM-VIwvODXUw18CK2Ednm98jn_Rbg), rebuilt in the
+		     site's own styling and POSTed straight to that form's /formResponse endpoint, so
+		     answers still land in the same responses sheet. The entry.* names ARE the field ids —
+		     if the Google Form's questions are ever edited, re-check them before touching this.
+		       entry.273577412   Name                  (required)
+		       entry.456834614   Affiliation           (optional)
+		       entry.900075940   Email Address         (required)
+		       entry.1252299877  Questions and Comments (optional, paragraph)
+		-->
+		<style>
+			/* ---- Party background -------------------------------------------------
+			   The #banner rule in the shared override.css is also used by the workshop
+			   page, so the mixer's rainbow treatment lives here and overrides it for
+			   this page only. The breakpoint #banner rules in override.css set padding
+			   and nothing else, so this one declaration holds at every width.
+
+			   Layers, topmost first:
+			     1. a drift of soft rainbow blobs — overlapping elliptical radial
+			        gradients that fade to fully transparent, so there is not a straight
+			        edge anywhere in the wash. Both the size and the centre of each blob
+			        are percentages of the banner box, so they stay spread over the whole
+			        page however tall it gets and however narrow the viewport is.
+			     2. a dark scrim — sits UNDER the blobs so their colour stays saturated
+			        while the photo beneath goes dark enough for whitesmoke text
+			     3. bg10.jpg — the circuit-board photo, as on the other pages
+			   url() here is relative to this file, hence ../images (override.css's own
+			   copy is ../../images because it resolves from assets/css/).
+			---------------------------------------------------------------------- */
+			#banner {
+				background:
+					radial-gradient(62% 17% at 44%  6%, rgba(255,  38, 120, 0.60), rgba(255,  38, 120, 0) 70%),
+					radial-gradient(46% 13% at 84% 13%, rgba(255, 150,   0, 0.50), rgba(255, 150,   0, 0) 72%),
+					radial-gradient(64% 15% at 44% 33%, rgba(255, 232,  70, 0.38), rgba(255, 232,  70, 0) 70%),
+					radial-gradient(44% 12% at 10% 24%, rgba( 40, 220, 150, 0.50), rgba( 40, 220, 150, 0) 72%),
+					radial-gradient(56% 16% at 78% 39%, rgba(  0, 176, 255, 0.50), rgba(  0, 176, 255, 0) 70%),
+					radial-gradient(50% 14% at 28% 49%, rgba(150,  70, 255, 0.58), rgba(150,  70, 255, 0) 72%),
+					radial-gradient(60% 15% at 86% 58%, rgba(255,  38, 120, 0.50), rgba(255,  38, 120, 0) 70%),
+					radial-gradient(46% 13% at 16% 67%, rgba(255, 150,   0, 0.44), rgba(255, 150,   0, 0) 72%),
+					radial-gradient(54% 15% at 62% 76%, rgba( 40, 220, 150, 0.48), rgba( 40, 220, 150, 0) 70%),
+					radial-gradient(48% 14% at 20% 86%, rgba(  0, 176, 255, 0.50), rgba(  0, 176, 255, 0) 72%),
+					radial-gradient(58% 16% at 80% 95%, rgba(150,  70, 255, 0.56), rgba(150,  70, 255, 0) 70%),
+					radial-gradient(ellipse at 50% 28%,
+						rgba(6, 2, 26, 0.50)   0%,
+						rgba(6, 2, 26, 0.72)  65%,
+						rgba(6, 2, 26, 0.86) 100%),
+					url("../images/bg/bg10.jpg");
+			}
+
+			/* ---- Title ------------------------------------------------------------
+			   MIXER! is the yellow of the old "11" (same fill + whitesmoke stroke),
+			   sized to sit just inside the width of "Can we build" above it. The size
+			   is em-relative to .bighero-font rather than to #banner, so it keeps that
+			   proportion through override.css's 600px and 480px hero breakpoints
+			   instead of needing its own.
+			---------------------------------------------------------------------- */
+			#banner .bighero-font .mixer-word {
+				/* min(): the em value wins on desktop; the cap takes over on narrow
+				   screens so the word can never push the page wider than the viewport.
+				   MIXER! measures ~4.25x its font-size, and --banner-content (set in
+				   override.css) is the real usable width of #banner once the Baymax
+				   gutter and the banner's own padding are taken out — so dividing by
+				   4.45 leaves ~5% margin. Sizing off that rather than off raw vw is
+				   what keeps the word clear of Baymax as well as of the viewport. */
+				font-size: min(1.97em, calc(var(--banner-content) / 4.45));
+				max-width: 100%;
+				line-height: 0.92em;
+				margin-top: 0.06em;
+				-webkit-text-fill-color: #E3E653;
+				-webkit-text-stroke-width: 0.032em;
+				-webkit-text-stroke-color: whitesmoke;
+				text-shadow: 0 0.07em 0.06em #222;
+			}
+
+			/* Hand-lettered, and knocked a couple of degrees off true, so the invite
+			   reads scrawled rather than set. Permanent Marker is already in the page's
+			   Google Fonts request and in assets/fonts/. */
+			#banner .invite-line {
+				font-family: "Permanent Marker", "Bradley Hand", "Segoe Script", cursive;
+				font-weight: 400;
+				/* Same guard as .mixer-word: 3.2em on desktop, but "You're Invited"
+				   measures ~6.9x its font-size and would wrap to two lines inside the
+				   ~330px content box of a 390px phone, so the cap holds it to one. */
+				font-size: min(3.2em, calc(var(--banner-content) / 7.3));
+				line-height: 1.15em;
+				letter-spacing: 0.015em;
+				-webkit-text-fill-color: #fff;
+				transform: rotate(-2.2deg);
+				margin-bottom: 0.35em;
+			}
+
+			/* The rainbow lifts the backdrop, so the type gets a heavier shadow back. */
+			#WSTitle {
+				text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85), 0 0 28px rgba(0, 0, 0, 0.55);
+			}
+
+			#banner p, #banner strong, #banner b {
+				text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+			}
+
+			/* ---- Sponsor ---------------------------------------------------------
+			   The TRI artwork is red/black/grey on transparency, so it would all but
+			   vanish against the banner — it sits on a white card instead, which is
+			   also how TRI present it. The card is bordered in the page's yellow so
+			   it reads as part of the design rather than a pasted-in image.
+
+			   images/logos/tri.png was extracted at native size (333x261) from the
+			   'TRI' layer of photoshop/logos/logos11.psd. That is the largest copy
+			   of this logo anywhere in the repo — the flattened logos.png strip is
+			   the same resolution — so the card is sized to show it near 1:1 rather
+			   than upscaled. Swap in an official high-res file if TRI supply one.
+			---------------------------------------------------------------------- */
+			#banner .sponsor {
+				margin: 1.7em 0 0.5em;
+			}
+
+			#banner .sponsor-label {
+				font-size: 1.15em;
+				text-transform: uppercase;
+				letter-spacing: 0.14em;
+				color: #E3E653;
+				-webkit-text-fill-color: #E3E653;
+				margin-bottom: 0.7em;
+			}
+
+			#banner .sponsor-logo {
+				display: inline-block;
+				box-sizing: border-box;
+				max-width: 100%;
+				background: #fff;
+				border: 3px solid #E3E653;
+				border-radius: 0.7rem;
+				padding: 1.6rem 2.4rem;
+				box-shadow: 0 0.5rem 1.6rem rgba(0, 0, 0, 0.5);
+				line-height: 0;
+			}
+
+			#banner .sponsor-logo img {
+				display: block;
+				width: 250px;
+				max-width: 100%;
+				height: auto;
+			}
+
+			#rsvp {
+				max-width: 34em;
+				margin: 0 auto;
+				text-align: left;
+			}
+
+			#rsvp .rsvp-field {
+				margin-bottom: 1.25em;
+			}
+
+			#rsvp label {
+				display: block;
+				color: whitesmoke;
+				font-size: 1.15em;
+				font-weight: 600;
+				letter-spacing: 0.02em;
+				text-transform: none;
+				margin-bottom: 0.35em;
+			}
+
+			#rsvp label .req {
+				color: #E3E653;
+			}
+
+			#rsvp input[type="text"],
+			#rsvp input[type="email"],
+			#rsvp textarea {
+				width: 100%;
+				background: rgba(0, 0, 0, 0.55);
+				border: 2px solid rgba(245, 245, 245, 0.55);
+				border-radius: 0.4em;
+				color: #fff;
+				padding: 0.6em 0.75em;
+				font-size: 1.05em;
+				line-height: 1.4em;
+				box-shadow: none;
+			}
+
+			#rsvp input[type="text"],
+			#rsvp input[type="email"],
+			#rsvp textarea {
+				text-shadow: none;
+			}
+
+			#rsvp textarea {
+				min-height: 7em;
+				resize: vertical;
+			}
+
+			#rsvp input[type="text"]:focus,
+			#rsvp input[type="email"]:focus,
+			#rsvp textarea:focus {
+				border-color: #E3E653;
+				background: rgba(0, 0, 0, 0.55);
+				outline: none;
+			}
+
+			#rsvp ::placeholder {
+				color: rgba(245, 245, 245, 0.45);
+			}
+
+			#rsvp .rsvp-actions {
+				text-align: center;
+				margin-top: 1.5em;
+			}
+
+			#rsvp-note {
+				color: whitesmoke;
+				font-size: 1em;
+				text-align: center;
+				margin-top: 1em;
+				min-height: 1.4em;
+			}
+
+			#rsvp-note.error {
+				color: #ffb3b3;
+			}
+
+			#rsvp-thanks {
+				display: none;
+				max-width: 34em;
+				margin: 0 auto;
+				border: 2px dashed #E3E653;
+				border-radius: 0.5em;
+				padding: 1.5em 1.25em;
+				color: whitesmoke;
+			}
+		</style>
+
+
+	</head>
+
+
+
+	<body class="landing">
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<div class="bighero-font">
+					<a style="" href="https://baymax.org">BAYMAX.ORG</a>
+				</div>
+
+				<a href="../" class="float-right">WORKSHOP</a>
+			</header>
+
+		<!-- Banner -->
+		<span class="anchor" id="top"></span>
+
+		<section id="banner">
+			<div id="WSTitle">
+				<div class="bighero-font">Can we build<br>Baymax<div class="question_mark">?</div>
+					<div class="mixer-word">MIXER!</div>
+				</div>
+
+				<br>
+
+				<div class="workshop_theme invite-line">You&rsquo;re Invited</div>
+				<div class="workshop_theme_byob2">
+					Mention you&rsquo;re a <strong style="color: #E3E653;">&ldquo;friend of Baymax&rdquo;</strong> at the door.
+				</div>
+
+				<br><br>
+
+
+				<div class="workshop_part_n">&#128197; <u>TIME and LOCATION</u> &#128197;</div>
+
+				<br>
+
+				<div class="workshop_part_n">
+					Mon. Dec. 7
+					<br>7:00 &ndash; 11:00 PM
+				</div>
+
+				<br>
+
+				<div style="color: #E3E653;" class="workshop_part_n">Clara&rsquo;s Junction</div>
+				<div class="workshop_theme_byob2">
+					<a style="color: whitesmoke; text-decoration: underline;" target="_blank"
+					   href="https://www.google.com/maps/search/?api=1&amp;query=Clara%27s+Junction%2C+2221+Tasman+Dr%2C+Santa+Clara%2C+CA+95054">2221 Tasman Dr, Santa Clara, CA 95054</a>
+				</div>
+				<div class="workshop_theme_byob2">0.8 mi &middot; approx. 17 min walk from the convention center</div>
+				<a style="color: white" target="_blank" href="https://www.google.com/maps/dir/Santa+Clara+Convention+Center,+5001+Great+America+Pkwy,+Santa+Clara,+CA+95054/Clara's+Junction,+2221+Tasman+Dr,+Santa+Clara,+CA+95054/data=!4m2!4m1!3e2">[google maps]</a>
+				<a style="color: white" target="_blank" href="https://www.clarasjunction.com/private-events/">[venue site]</a>
+
+				<br><br>
+
+
+				<div style="color: #E3E653;" class="workshop_part_n">&#127867; Drinks and small bites &#127867;</div>
+				<div class="workshop_theme_byob2">On the house.</div>
+
+				<div class="sponsor">
+					<div class="workshop_theme_byob2 sponsor-label">Mixer sponsored by</div>
+					<a class="sponsor-logo hvr-grow" target="_blank" href="https://www.tri.global/">
+						<img src="../images/logos/tri.png" alt="Toyota Research Institute">
+					</a>
+				</div>
+
+
+				<br>
+
+				<div class="workshop_theme_byob2">&#9888;&#65039;&#10071; FIRST COME, FIRST SERVED &#10071;&#9888;&#65039;<br>Space is limited and entrance is not guaranteed.<br>Please arrive ON TIME to ensure admission!</div>
+
+				<br><br>
+
+
+				<!-- TODO: venue photo (like 2025's images/mixer/whalehunting.jpeg) once Alex sends one.
+				<img style="width:30em; max-width:95%; border: solid white 2px;" src="../images/mixer/clarasjunction.jpeg">
+				<br><br>
+				-->
+
+
+				<hr>
+
+				<span class="anchor" id="rsvp-top"></span>
+				<div class="workshop_part_n">&#9997;&#65039; <u>RSVP</u> &#9997;&#65039;</div>
+				<div class="workshop_theme_byob2" style="margin-bottom: 1.25em;">
+					An RSVP helps us plan, but it is not a ticket.
+				</div>
+
+				<!-- Submissions are POSTed into this hidden iframe so the page never navigates away. -->
+				<iframe name="rsvp-sink" id="rsvp-sink" title="RSVP submission target" style="display:none; width:0; height:0; border:0;"></iframe>
+
+				<form id="rsvp"
+				      action="https://docs.google.com/forms/d/e/1FAIpQLSextDHvYHQteZroQgRb2tM-VIwvODXUw18CK2Ednm98jn_Rbg/formResponse"
+				      method="POST"
+				      target="rsvp-sink">
+
+					<div class="rsvp-field">
+						<label for="rsvp-name">Name <span class="req">*</span></label>
+						<input id="rsvp-name" type="text" name="entry.273577412" autocomplete="name" required>
+					</div>
+
+					<div class="rsvp-field">
+						<label for="rsvp-affiliation">Affiliation</label>
+						<input id="rsvp-affiliation" type="text" name="entry.456834614" autocomplete="organization">
+					</div>
+
+					<div class="rsvp-field">
+						<label for="rsvp-email">Email Address <span class="req">*</span></label>
+						<input id="rsvp-email" type="email" name="entry.900075940" autocomplete="email" required>
+					</div>
+
+					<div class="rsvp-field">
+						<label for="rsvp-comments">Questions and Comments</label>
+						<textarea id="rsvp-comments" name="entry.1252299877" rows="4"></textarea>
+					</div>
+
+					<div class="rsvp-actions">
+						<button type="submit" id="rsvp-submit" class="button big special bighero-font hvr-wobble-top" style="min-width:9em;">RSVP</button>
+					</div>
+
+					<div id="rsvp-note"></div>
+				</form>
+
+				<div id="rsvp-thanks">
+					<div class="workshop_part_n" style="margin-top:0;">&#127881; You&rsquo;re on the list!</div>
+					<div class="workshop_theme_byob2">
+						Thanks for the RSVP &mdash; see you Monday, December 7 at Clara&rsquo;s Junction.
+					</div>
+				</div>
+
+				<br><br>
+
+			</div>
+
+
+			<div id="baymax"><img style="height: 100%;" src="../images/baymax/baymax.png" /></div>
+
+		</section>
+
+
+
+		<div id="redbar"></div>
+
+		<!-- Footer removed 2026-11-06 at Alex's request. The workshop page still
+		     carries its "Designed by Alex Alspach" footer. -->
+
+		<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/skel.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<!--[if lte IE 8]><script src="../assets/js/ie/respond.min.js"></script><![endif]-->
+		<script src="../assets/js/main.js"></script>
+
+		<script>
+		// RSVP: hand the answers to the Google Form, then swap the form for a thank-you.
+		// The POST goes into the hidden iframe; the response is cross-origin so we can't read
+		// it — we just confirm once the request has had time to land.
+		(function () {
+			var form    = document.getElementById('rsvp');
+			var sink    = document.getElementById('rsvp-sink');
+			var note    = document.getElementById('rsvp-note');
+			var thanks  = document.getElementById('rsvp-thanks');
+			var submit  = document.getElementById('rsvp-submit');
+			if (!form) { return; }
+
+			var sent = false;
+			var done = false;
+
+			function finish() {
+				if (done) { return; }
+				done = true;
+				form.style.display = 'none';
+				thanks.style.display = 'block';
+				thanks.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			}
+
+			form.addEventListener('submit', function () {
+				sent = true;
+				note.className = '';
+				note.textContent = 'Sending…';
+				submit.disabled = true;
+				// Fallback in case the iframe never reports a load (Google may refuse to
+				// render its confirmation page in a frame). The POST still goes through.
+				setTimeout(finish, 2500);
+			});
+
+			sink.addEventListener('load', function () {
+				if (sent) { finish(); }
+			});
+		})();
+		</script>
+
+
+	</body>
+</html>
