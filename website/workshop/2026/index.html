@@ -82,6 +82,143 @@
 			#speaker_face_flex_grid .show-more-speaker-section {
 				margin-top: 0.6em;
 			}
+
+			/* Organizer photos: rounded corners and the same yellow border as the
+			   speaker photos (.speaker_face in override.css). */
+			#four .feature .image img {
+				box-sizing: border-box;
+				border: .2rem solid #E3E653;
+				border-radius: 1.25rem;
+			}
+
+			/* Organizer cards: corners concentric with the photo's. The photo sits
+			   2em in from the card edge at every width (.feature .image padding -
+			   override.css above 980px, the rule below at 980px and under), so the
+			   card radius is the photo radius plus that gap.
+			   The grey logo box under the cards takes the same radius. */
+			#four .feature,
+			#four .org_logos2_graybg {
+				border-radius: calc(1.25rem + 2em);
+			}
+
+			/* At 980px and below override.css stacks the card and stretches the
+			   photo to the card's full width, which makes it enormous on a tablet.
+			   Instead every photo is centred and set to one height - that of the
+			   tallest, Joohyung's portrait, at the 14em width the photos used to be
+			   capped to - with its width following from its own aspect ratio.
+			   The min() lowers that shared height on narrow screens just enough that
+			   the widest photo (Jinoh's, 1.33:1) still fits the card uncropped; the
+			   length subtracted from 100vw is the wrapper, card and photo padding. */
+			@media screen and (max-width: 980px) {
+
+				#four .feature .image {
+					width: 100%;
+					padding: 2em 2em 1.25em 2em;
+					text-align: center;
+				}
+
+				#four .feature .image img {
+					float: none;
+					display: inline-block;
+					width: auto;
+					max-width: 100%;
+					height: min(19.5em, calc((100vw - 6em) / 1.34));
+					object-fit: cover;
+				}
+
+				/* The name sits centred under the centred photo; the bio stays left. */
+				#four .feature .content h2 {
+					text-align: center;
+				}
+
+			}
+
+			/* Objectives, Schedule, Related Links and Contact:
+			   the content sits in a rounded card with
+			   the same corner radius as the organizer cards. Each card is the
+			   section's own background lightened with a white overlay, so it reads
+			   as a slightly lighter shade of the same colour. The teal value is the
+			   organizer cards' own (.feature in override.css); the light grey needs
+			   a much higher alpha to show at all, since it is nearly white already. */
+			section.objectives .inner,
+			#two .inner,
+			#five .inner,
+			#six .inner {
+				border-radius: calc(1.25rem + 2em);
+				padding: 2em 1.5em 0.5em 1.5em;
+			}
+
+			#two .inner,
+			#five .inner {
+				background: rgba(255, 255, 255, 0.5);
+			}
+
+			section.objectives .inner,
+			#six .inner {
+				background: rgba(255, 255, 255, 0.05);
+			}
+
+			/* Organizers header: centred stamp title, then the names as one wrapping
+			   row of jump links (no bullets, no card) so it reads as the section's
+			   header rather than as another bio card. */
+			#four .organizer-header {
+				text-align: center;
+				margin-bottom: 3em;
+			}
+
+			#four .organizer-index {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 0.3em 1.75em;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			#four .organizer-index li {
+				padding: 0;
+			}
+
+			#four .organizer-index a {
+				font-size: larger;
+				font-weight: 700;
+			}
+
+			/* Phones: override.css drops the bio text's side padding to 1em here, so
+			   the photo's inset follows it to stay aligned, and every card's radius
+			   shrinks by the same amount to stay concentric with the photo. */
+			@media screen and (max-width: 480px) {
+
+				#four .feature .image {
+					padding: 1em 1em 1em 1em;
+				}
+
+				#four .feature .image img {
+					height: min(19.5em, calc((100vw - 4em) / 1.34));
+				}
+
+				#four .feature,
+				#four .org_logos2_graybg,
+				section.objectives .inner,
+				#two .inner,
+				#five .inner,
+				#six .inner {
+					border-radius: calc(1.25rem + 1em);
+				}
+
+			}
+
+			@media screen and (min-width: 981px) {
+
+				section.objectives .inner,
+				#two .inner,
+				#five .inner,
+				#six .inner {
+					padding: 3em 3em 1.5em 3em;
+				}
+
+			}
 		</style>
 
 		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
@@ -409,7 +546,7 @@
 		<div id="redbar"></div>
 		<!--<span class="anchor" id="call"></span>-->
 		<span class="anchor" id="objectives"></span>
-		<section id="one" class="wrapper style2" style="background-color: #17333f;">
+		<section id="one" class="wrapper style2 objectives" style="background-color: #17333f;">
 
 			<div class="inner">
 
@@ -596,27 +733,28 @@
 		<section id="four" class="wrapper style2">
 			<div class="inner">
 
-				<h2><strong>Organizers</strong></h2>
+				<!-- Section header: the stamp title used for Speakers, then the six names
+				     as a row of jump links to the bio cards below. -->
+				<div class="organizer-header">
 
-				
-				<ul>
+					<div id="fun-title">
+						<div class="stamp ">
+							<div class="bighero-font">
+								⚡ Organizers ⚡
+							</div>
+						</div>
+					</div>
 
-					<li><a href="#anchor_atkeson" style="font-size: larger; font-weight: 700;">Chris Atkeson</a>, Carnegie Mellon University</li>
+					<ul class="organizer-index">
+						<li><a href="#anchor_atkeson">Chris Atkeson</a></li>
+						<li><a href="#anchor_kim">Joohyung Kim</a></li>
+						<li><a href="#anchor_lee">Jinoh Lee</a></li>
+						<li><a href="#anchor_onol">Aykut Onol</a></li>
+						<li><a href="#anchor_yamane">Katsu Yamane</a></li>
+						<li><a href="#anchor_alspach">Alex Alspach</a></li>
+					</ul>
 
-					<li><a href="#anchor_kim" style="font-size: larger; font-weight: 700;">Joohyung Kim</a>, University of Illinois Urbana-Champaign</li>
-
-					<li><a href="#anchor_lee" style="font-size: larger; font-weight: 700;">Jinoh Lee</a>, German Aerospace Center (DLR)</li>
-
-
-					<li><a href="#anchor_onol" style="font-size: larger; font-weight: 700;">Aykut Onol</a>, Toyota Research Institute (TRI)</li>
-
-					<li><a href="#anchor_yamane" style="font-size: larger; font-weight: 700;">Katsu Yamane</a>, Path Robotics Inc.</li>
-
-					<li><a href="#anchor_alspach" style="font-size: larger; font-weight: 700;">Alex Alspach</a>, Walden Robotics</li>
-
-				</ul>
-
-				<br>
+				</div>
 
 				<span class="anchor2" id="anchor_atkeson"></span>
 				<article class="feature left">
@@ -702,13 +840,23 @@
 
 						<h2>Alex Alspach</h2>
 
-						<p>Alex is building and deploying useful, fun-to-work-alongside robots as the <i>Robot Character and Industrial Design Lead</i> at <a target="_blank" href="https://www.waldenrobotics.com/">Walden Robotics</a>.</p>
+						<p>Alex is building and deploying useful, fun-to-work-alongside robots as the Robot Character and Industrial Design Lead at <a target="_blank" href="https://www.waldenrobotics.com/">Walden Robotics</a>.</p>
 
-						<p>Previously, Alex built soft systems for sensing and manipulation at Toyota Research Institute (TRI), and led their Whole-Body Manipulation (&ldquo;<a target="_blank" href="https://medium.com/toyotaresearch/meet-punyo-tris-soft-robot-for-whole-body-manipulation-research-949c934ac3d8">Punyo</a>&rdquo;) Team. He earned his bachelor's and master's degrees at Drexel University with time spent in the Drexel Autonomous Systems Lab (DASL) and KAIST's HuboLab (in Korea). After graduating, Alex spent two years at SimLab in Seoul developing and marketing <a target="_blank" href="https://youtu.be/iLGdahyyOvs">tools for manipulation research</a> and developing <a target="_blank" href="https://youtu.be/s_V_YJF4esg">artists' tools</a> for animating complex, synchronized industrial robots. Prior to joining TRI, Alex developed <a target="_blank" href="https://youtu.be/MvinY3kleVc">soft huggable humanoid robots</a> and various other <a target="_blank" href="https://youtu.be/PpdFCd2KQ8o">creative robotic systems</a> at Disney Research with Joohyung and Katsu!</p>
+						<p>Previously, Alex led Toyota Research Institute's (TRI) <a target="_blank" href="https://medium.com/toyotaresearch/meet-punyo-tris-soft-robot-for-whole-body-manipulation-research-949c934ac3d8">Punyo Whole-Body Manipulation Team</a>. He earned his bachelor's and master's degrees at Drexel University with time spent in the Drexel Autonomous Systems Lab (DASL) and KAIST's HuboLab in Korea. After graduating, Alex spent two years at SimLab in Seoul where he developed and marketed tools for manipulation research (including the <a target="_blank" href="https://youtu.be/iLGdahyyOvs">Allegro Hand</a>) and built <a target="_blank" href="https://youtu.be/s_V_YJF4esg">artists' tools</a> for animating complex, synchronized industrial robots. Prior to joining TRI, Alex developed <a target="_blank" href="https://youtu.be/MvinY3kleVc">soft huggable humanoid robots</a> and various other <a target="_blank" href="https://youtu.be/PpdFCd2KQ8o">creative robotic systems</a> at Disney Research with Joohyung and Katsu!</p>
 
 						<p><a target="_blank" href="http://www.alexalspach.com">alexalspach.com</a>
 
 						<br><a target="_blank" href="https://www.waldenrobotics.com/careers">Walden Robotics Careers</a> - We're hiring!</p>
+
+						<!-- HIDDEN: Walden Robotics video; fills the width of the bio's text column at 16:9. Remove this comment wrapper to show it.
+						<iframe style="display: block; width: 100%; aspect-ratio: 16 / 9; border: 0;"
+							src="https://www.youtube.com/embed/fewvZrckA5c"
+							title="Walden Robotics: General-purpose robots that continuously learn &amp; improve while performing real work"
+							loading="lazy"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+							referrerpolicy="strict-origin-when-cross-origin"
+							allowfullscreen></iframe>
+						-->
 
 					</div>
 				</article>	
