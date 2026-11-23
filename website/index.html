@@ -45,6 +45,43 @@
 		<link rel="stylesheet" href="assets/css/override.css" />
 		<link rel="stylesheet" href="assets/css/photos.css">
 		<link rel="stylesheet" href="assets/css/hovercss/hover.css">
+
+		<!-- Page-specific styles -->
+		<style>
+			/* ---- Line breaks on phones ----------------------------------------
+			   Short copy is balanced so no line ends on a lone word, and body
+			   text avoids a one-word last line. The past-workshop titles
+			   (.ws_line) are blocks of their own because balancing does not
+			   reach across <br>s. */
+			.ws_line {
+				display: block;
+				text-wrap: balance;
+			}
+
+			.wrapper li {
+				text-wrap: balance;
+			}
+
+			.wrapper p {
+				text-wrap: pretty;
+			}
+
+			@media screen and (max-width: 480px) {
+
+				/* The tagline keeps its four written lines: the type shrinks
+				   until the longest, "International Conference", fits. */
+				#banner .banner_tagline {
+					font-size: min(2em, calc((100vw - 4em) / 12));
+				}
+
+				/* "Past" stays on one line between its bolts. */
+				#fun-title .stamp .bighero-font {
+					width: auto;
+					white-space: nowrap;
+				}
+
+			}
+		</style>
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
@@ -219,34 +256,25 @@
 
 
 					<p>
-					2025: <a target="_blank" href="/workshop/2025">What Can We Build Today? &amp; BYOB (Bring Your Own Baymax)</a>
-					<br>
+					<span class="ws_line">2025: <a target="_blank" href="/workshop/2025">What Can We Build Today? &amp; BYOB (Bring Your Own Baymax)</a></span>
 
-					2024: <a target="_blank" href="/workshop/2024">Learning and Data Collection for Skillful Humanoid Robots</a>
-					<br>
+					<span class="ws_line">2024: <a target="_blank" href="/workshop/2024">Learning and Data Collection for Skillful Humanoid Robots</a></span>
 
-					2023: <a target="_blank" href="/workshop/2023">Let’s talk about Safe, Commercially Viable Humanoids!</a>
-					<br>
+					<span class="ws_line">2023: <a target="_blank" href="/workshop/2023">Let’s talk about Safe, Commercially Viable Humanoids!</a></span>
 
-					2022: <a target="_blank" href="/workshop/2022">Education and Open Source for Humanoid Robots</a>
-					<br>
+					<span class="ws_line">2022: <a target="_blank" href="/workshop/2022">Education and Open Source for Humanoid Robots</a></span>
 
-					2021: <a target="_blank" href="/workshop/2020">Superhuman Abilities in Current Humanoids</a>
-					<br>
+					<span class="ws_line">2021: <a target="_blank" href="/workshop/2020">Superhuman Abilities in Current Humanoids</a></span>
 
-					2019: <a target="_blank" href="/workshop/2019">Human-Humanoid Communication</a>
-					<br>
+					<span class="ws_line">2019: <a target="_blank" href="/workshop/2019">Human-Humanoid Communication</a></span>
 
-					2018: <a target="_blank" href="/workshop/2018">Fail-Safe HW & SW and Learning in Humanoid Robots</a>
-					<br>
+					<span class="ws_line">2018: <a target="_blank" href="/workshop/2018">Fail-Safe HW & SW and Learning in Humanoid Robots</a></span>
 					
-					2017: <a target="_blank" href="/workshop/2017">Design and Control for Soft Human-Robot Interaction</a>
-					<br>
+					<span class="ws_line">2017: <a target="_blank" href="/workshop/2017">Design and Control for Soft Human-Robot Interaction</a></span>
 
-					2016: <a target="_blank" href="/workshop/2016">Making Hard Robots Soft: Sensors, Skin and Airbags</a>
-					<br>
+					<span class="ws_line">2016: <a target="_blank" href="/workshop/2016">Making Hard Robots Soft: Sensors, Skin and Airbags</a></span>
 					
-					2015: <a target="_blank" href="/workshop/2015">Soft Robotics and Safe Human-Robot Interaction in Humanoids</a>
+					<span class="ws_line">2015: <a target="_blank" href="/workshop/2015">Soft Robotics and Safe Human-Robot Interaction in Humanoids</a></span>
 					</p>
 
 					<br>

@@ -219,6 +219,58 @@
 				}
 
 			}
+			/* ---- Line breaks on phones ----------------------------------------
+			   Short copy is balanced so no line ends on a lone word, and body
+			   text avoids a one-word last line. Credential lines (.cred) and the
+			   past-workshop titles (.ws_line) are blocks of their own because
+			   balancing does not reach across <br>s. */
+			.nb { white-space: nowrap; }
+
+			.phone_br { display: none; }
+
+			.cred,
+			.ws_line {
+				display: block;
+				text-wrap: balance;
+			}
+
+			/* A linked name inside a credential line stays in one piece. */
+			.cred a { white-space: nowrap; }
+
+			#one center > p,
+			.wrapper li {
+				text-wrap: balance;
+			}
+
+			.wrapper p {
+				text-wrap: pretty;
+			}
+
+			@media screen and (max-width: 480px) {
+
+				.phone_br { display: inline; }
+
+				.phone_hide { display: none; }
+
+				/* Theme and date break by phrase - "Humanoids for / Characters, /
+				   Performance & / Creative Applications", then the date over the
+				   room - each sized so its longest phrase fits the banner. */
+				#banner .workshop_theme {
+					font-size: min(2.45em, calc(var(--banner-content) / 10.2));
+				}
+
+				#banner .workshop_year {
+					font-size: min(2em, calc(var(--banner-content) / 13));
+				}
+
+				/* Section stamps stay on one line, bolts beside the word. */
+				#fun-title .stamp .bighero-font {
+					width: auto;
+					white-space: nowrap;
+					font-size: min(2em, 7.3vw);
+				}
+
+			}
 		</style>
 
 		<!-- Meta Tags Generated via https://www.opengraph.xyz -->
@@ -283,9 +335,9 @@
 				<div class="bighero-font">Can we build<br>Baymax<div class="question_mark">?</div></div>
 				<div class="number-11">11</div>
 
-				<div class="workshop_theme">Humanoids for Characters,<br>Performance &amp; Creative Applications</div>
+				<div class="workshop_theme">Humanoids for <br class="phone_br">Characters,<br>Performance &amp; <br class="phone_br">Creative Applications</div>
 				<!-- TBD: room number, once the conference publishes the workshop program -->
-				<div class="workshop_year">Monday, December&nbsp;7, 2026&nbsp;&middot; Room&nbsp;TBD</div>
+				<div class="workshop_year"><span class="nb">Monday, December&nbsp;7, 2026</span><span class="phone_hide">&nbsp;&middot; </span><br class="phone_br"><span class="nb">Room&nbsp;TBD</span></div>
 
 			</div>
 
@@ -352,9 +404,9 @@
 								<a target="_blank" style="font-size: x-large"
 									href="https://www.allfx.com/">
 									Eric Allard</a>
-								<br>Special Effects Supervisor
-								<br>Founder, <a target="_blank" href="https://www.allfx.com/">Allfx, Inc.</a>
-								<br>Creator of Johnny 5 (<em>Short Circuit</em>)
+								<span class="cred">Special Effects Supervisor</span>
+								<span class="cred">Founder, <a target="_blank" href="https://www.allfx.com/">Allfx, Inc.</a></span>
+								<span class="cred">Creator of Johnny 5 (<em>Short Circuit</em>)</span>
 								<!-- Bio adapted from the "About Eric Allard" and company sections of https://www.allfx.com/ (Oct 2026). Eric supplied no bio text in the invite sheet; replace if he sends his own. -->
 								<div class="text-content short-text">
 								<br>
@@ -364,8 +416,8 @@
 
 									<p>Eric began as an artist and maker, served in US Army Special Forces, and worked his way up in Hollywood from carpenter to running his own effects company. He is a US patent holder in robotics and now consults on real-world humanoid robots through Robonality&trade;, helping make future robots more user-friendly and likable.</p>
 
-									<p><a target="_blank" href="https://www.allfx.com/">allfx.com</a> &middot;
-									<a target="_blank" href="https://www.imdb.com/name/nm0020063/">IMDb</a> &middot;
+									<p><a target="_blank" href="https://www.allfx.com/">allfx.com</a>&nbsp;&middot;
+									<a target="_blank" href="https://www.imdb.com/name/nm0020063/">IMDb</a>&nbsp;&middot;
 									<a target="_blank" href="https://www.linkedin.com/in/eric-allard-001802125/">LinkedIn</a></p>
 
 									<hr>
@@ -388,8 +440,8 @@
 								<a target="_blank" style="font-size: x-large"
 									href="https://www.willknight.com">
 									Will Knight</a>
-								<br>Designer, Animator &amp; Illustrator
-								<br>Figment Ltd
+								<span class="cred">Designer, Animator &amp; Illustrator</span>
+								<span class="cred">Figment Ltd</span>
 
 								<div class="text-content short-text">
 								<br>
@@ -407,7 +459,7 @@
 
 									<p>His approach to robot character&mdash;&ldquo;remind, not replicate&rdquo;&mdash;draws on theories of human perception and combines product semantics with visual storytelling to explore how machines can communicate clearly and establish distinctive, appealing identities.</p>
 
-									<p><a target="_blank" href="https://www.willknight.com">willknight.com</a> &middot;
+									<p><a target="_blank" href="https://www.willknight.com">willknight.com</a>&nbsp;&middot;
 									<a target="_blank" href="https://www.linkedin.com/in/willknight/">LinkedIn</a></p>
 
 									<hr>
@@ -430,9 +482,9 @@
 								<a target="_blank" style="font-size: x-large"
 									href="https://www.momahler.com/">
 									Moshe Mahler</a>
-								<br>Faculty at the Entertainment Technology Center
-								<br>at Carnegie Mellon University
-								<br>Principal and Owner, <a target="_blank" href="https://bigemotiontech.com/">BIG eMotion Technologies</a>
+								<span class="cred">Faculty at the Entertainment Technology Center</span>
+								<span class="cred">at Carnegie Mellon University</span>
+								<span class="cred">Principal and Owner, <a target="_blank" href="https://bigemotiontech.com/">BIG eMotion Technologies</a></span>
 
 								<div class="text-content short-text">
 								<br>
@@ -442,8 +494,8 @@
 
 									<p>Moshe has contributed to dozens of publications in the computer graphics and animation fields. His art works and animated films have been featured in a number of venues internationally, including SIGGRAPH 2005, 2007, 2011, 2013, 2015, 2017, 2023, and 2024.</p>
 
-									<p><a target="_blank" href="https://www.momahler.com/">momahler.com</a> &middot;
-									<a target="_blank" href="https://bigemotiontech.com/">bigemotiontech.com</a> &middot;
+									<p><a target="_blank" href="https://www.momahler.com/">momahler.com</a>&nbsp;&middot;
+									<a target="_blank" href="https://bigemotiontech.com/">bigemotiontech.com</a>&nbsp;&middot;
 									<a target="_blank" href="https://www.linkedin.com/in/moshe-mahler-6969233/">LinkedIn</a></p>
 
 									<hr>
@@ -466,9 +518,9 @@
 								<a target="_blank" style="font-size: x-large"
 									href="https://www.iainm.com/">
 									Iain Matthews</a>
-								<br>Co-founder and CEO, <a target="_blank" href="https://liff.ai/">liff.ai</a>
-								<br>Courtesy Faculty, Robotics Institute,
-								<br>Carnegie Mellon University
+								<span class="cred">Co-founder and CEO, <a target="_blank" href="https://liff.ai/">liff.ai</a></span>
+								<span class="cred">Courtesy Faculty, Robotics Institute,</span>
+								<span class="cred">Carnegie Mellon University</span>
 
 								<div class="text-content short-text">
 								<br>
@@ -478,8 +530,8 @@
 
 									<p>Iain holds a PhD in computer vision from the University of East Anglia and was faculty in the Robotics Institute at Carnegie Mellon University, where he retains a courtesy appointment. He also served as Associate Director of Disney Research Pittsburgh. He has published over 140 papers and holds more than two dozen US patents.</p>
 
-									<p><a target="_blank" href="https://www.iainm.com/">iainm.com</a> &middot;
-									<a target="_blank" href="https://liff.ai/">liff.ai</a> &middot;
+									<p><a target="_blank" href="https://www.iainm.com/">iainm.com</a>&nbsp;&middot;
+									<a target="_blank" href="https://liff.ai/">liff.ai</a>&nbsp;&middot;
 									<a target="_blank" href="https://www.linkedin.com/in/iainmatthews">LinkedIn</a></p>
 
 									<hr>
@@ -502,9 +554,9 @@
 								<a target="_blank" style="font-size: x-large"
 									href="https://cmubig.github.io/">
 									Jean Oh</a>
-								<br>Associate Research Professor, Robotics Institute,
-								<br>Carnegie Mellon University
-								<br>Director, <a target="_blank" href="https://www.cs.cmu.edu/~jeanoh/big/">roBot Intelligence Group (BIG)</a>
+								<span class="cred">Associate Research Professor, Robotics Institute,</span>
+								<span class="cred">Carnegie Mellon University</span>
+								<span class="cred">Director, <a target="_blank" href="https://www.cs.cmu.edu/~jeanoh/big/">roBot Intelligence Group (BIG)</a></span>
 
 								<div class="text-content short-text">
 								<br>
@@ -514,7 +566,7 @@
 
 									<p>Jean received a PhD from CMU, MS from Columbia University, and BS from Yonsei University. Jean is a co-founder of Lavoro AI where she brings her creative, safe, and compassionate Physical AI innovations to market.</p>
 
-									<p><a target="_blank" href="https://cmubig.github.io/">cmubig.github.io</a> &middot;
+									<p><a target="_blank" href="https://cmubig.github.io/">cmubig.github.io</a>&nbsp;&middot;
 									<a target="_blank" href="https://www.linkedin.com/in/jeanoh-cmu/">LinkedIn</a></p>
 
 									<hr>
@@ -583,34 +635,25 @@
 
 
 				<p>
-				2025: <a target="_blank" href="/workshop/2025">What Can We Build Today? &amp; BYOB (Bring Your Own Baymax)</a>
-				<br>
+				<span class="ws_line">2025: <a target="_blank" href="/workshop/2025">What Can We Build Today? &amp; BYOB (Bring Your Own Baymax)</a></span>
 
-				2024: <a target="_blank" href="/workshop/2024">Learning and Data Collection for Skillful Humanoid Robots</a>
-				<br>
+				<span class="ws_line">2024: <a target="_blank" href="/workshop/2024">Learning and Data Collection for Skillful Humanoid Robots</a></span>
 
-				2023: <a target="_blank" href="/workshop/2023">Let’s talk about Safe, Commercially Viable Humanoids!</a>
-				<br>
+				<span class="ws_line">2023: <a target="_blank" href="/workshop/2023">Let’s talk about Safe, Commercially Viable Humanoids!</a></span>
 
-				2022: <a target="_blank" href="/workshop/2022">Education and Open Source for Humanoid Robots</a>
-				<br>
+				<span class="ws_line">2022: <a target="_blank" href="/workshop/2022">Education and Open Source for Humanoid Robots</a></span>
 
-				2021: <a target="_blank" href="/workshop/2020">Superhuman Abilities in Current Humanoids</a>
-				<br>
+				<span class="ws_line">2021: <a target="_blank" href="/workshop/2020">Superhuman Abilities in Current Humanoids</a></span>
 
-				2019: <a target="_blank" href="/workshop/2019">Human-Humanoid Communication</a>
-				<br>
+				<span class="ws_line">2019: <a target="_blank" href="/workshop/2019">Human-Humanoid Communication</a></span>
 
-				2018: <a target="_blank" href="/workshop/2018">Fail-Safe HW &amp; SW and Learning in Humanoid Robots</a>
-				<br>
+				<span class="ws_line">2018: <a target="_blank" href="/workshop/2018">Fail-Safe HW &amp; SW and Learning in Humanoid Robots</a></span>
 				
-				2017: <a target="_blank" href="/workshop/2017">Design and Control for Soft Human-Robot Interaction</a>
-				<br>
+				<span class="ws_line">2017: <a target="_blank" href="/workshop/2017">Design and Control for Soft Human-Robot Interaction</a></span>
 
-				2016: <a target="_blank" href="/workshop/2016">Making Hard Robots Soft: Sensors, Skin and Airbags</a>
-				<br>
+				<span class="ws_line">2016: <a target="_blank" href="/workshop/2016">Making Hard Robots Soft: Sensors, Skin and Airbags</a></span>
 				
-				2015: <a target="_blank" href="/workshop/2015">Soft Robotics and Safe Human-Robot Interaction in Humanoids</a>
+				<span class="ws_line">2015: <a target="_blank" href="/workshop/2015">Soft Robotics and Safe Human-Robot Interaction in Humanoids</a></span>
 				</p>
 			
 
